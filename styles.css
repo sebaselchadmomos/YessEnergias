@@ -1,0 +1,202 @@
+/* Global Styles */
+body {
+    font-family: "Georgia", serif;
+    color: #333333;
+    background-color: #4a4a8a;
+    line-height: 3;
+    margin: 0;
+    padding: 0;
+    
+}
+
+h1, h2, h3 {
+    color: #4a4a8a;
+    font-family: 'Lobster', cursive;
+}
+
+a {
+    color: #4a4a8a;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #c8a165;
+    text-decoration: underline;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #4a4a8a;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li a {
+     /* También afecta a los enlaces del menú */
+    font-size: 1.2rem; /* Ajusta el tamaño de la fuente si es necesario */
+    text-transform: capitalize; /* Opcional: Cambia la forma del texto */
+    color: #ffffff; /* Asegúrate de que el color del texto sea visible */
+    text-decoration: none;
+}
+
+header nav ul li a:hover {
+    color: #c8a165;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('flordelavidarosa.jpg'); /* Ruta de la imagen */
+    background-size: cover; /* Asegura que la imagen cubra toda la sección */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    color: white; /* Cambia el color del texto si es necesario */
+    text-align: center; /* Centra el contenido de la sección */
+    padding: 4rem 2rem; /* Espaciado interno */
+    
+}
+.hero2 {
+    text-align: center;
+    padding: 4rem 1rem;
+    background-image: linear-gradient(to bottom, #f7f4f0, #e0e0ff);
+    color: #4a4a8a;
+    
+}
+
+.hero2 h1 {
+    font-size: 6rem;
+    font-weight: bold;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero h1 {
+    font-size: 6rem;
+    font-weight: bold;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-top: 0rem;
+    color: black;
+    font-family: "Playwrite AU SA", serif;
+    margin-bottom: 0rem;
+}
+
+/* Buttons */
+button {
+    background-color: #c8a165;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #a68042;
+}
+
+/* Services Section */
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.service-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 1rem;
+}
+
+.service-card h2 {
+    color: #4a4a8a;
+    margin-bottom: 0.5rem;
+}
+
+.service-card p {
+    color: #555555;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Hover Effects */
+section:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+}
+
+/* Sección de la cuadrícula */
+.grid-links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    gap: 2rem; /* Espacio entre los cuadros */
+    padding: 2rem;
+    background-color: #f7f4f0; /* Fondo de la sección */
+    text-align: center;
+    
+}
+
+.grid-item {
+    display: flex; /* Cambia a flexbox */
+    flex-direction: row; /* Alinea elementos en fila */
+    align-items: center; /* Centra verticalmente */
+    background-color: #A294F9; /* Fondo del cuadro */
+    color: white;
+    border-radius: 12px;
+    padding: 1rem;
+    height: 120px; /* Altura fija */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.grid-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.grid-item img {
+    width: 100px; /* Tamaño del logo */
+    height: 100px;
+    margin-bottom: 0rem; /* Espacio entre el logo y el título */
+    border-radius: 50%; /* Hace que el logo sea circular */
+    margin-right: 1.5rem; /* Añade espacio entre la imagen y el texto */
+    border: 2px solid white; /* Añade un borde blanco al logo (opcional) */
+}
+
+.grid-item a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.7rem;
+    text-align: center;
+}
+
+.grid-item a:hover {
+    color: #c8a165;
+}
