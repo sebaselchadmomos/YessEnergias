@@ -1,12 +1,25 @@
 /* Global Styles */
+
+html {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+* {
+    box-sizing: border-box; /* Asegura que paddings y bordes se incluyan en el ancho */
+}
+
 body {
     font-family: "Georgia", serif;
     color: #333333;
     background-color: #4a4a8a;
-    line-height: 3;
-    margin: 0;
+    line-height: 1.5;
     padding: 0;
-    
+    margin: 0;
+    overflow-x: hidden;
+    height: 100%;
 }
 
 h1, h2, h3 {
@@ -30,6 +43,7 @@ header {
     color: white;
     padding: 1rem 0;
     text-align: center;
+    image-resolution: 100%;
 
 }
 
@@ -62,21 +76,52 @@ header nav ul li a:hover {
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     color: white; /* Cambia el color del texto si es necesario */
     text-align: center; /* Centra el contenido de la sección */
-    padding: 4rem 2rem; /* Espaciado interno */
+    padding: auto; /* Espaciado interno */
+    height: 100vh;
+    min-height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
     
 }
 .hero2 {
     text-align: center;
-    padding: 4rem 1rem;
+    padding: 4rem 15rem;
     background-image: linear-gradient(to bottom, #f7f4f0, #e0e0ff);
     color: #4a4a8a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     
 }
 
 .hero2 h1 {
-    font-size: 6rem;
+    font-size: 4rem;
     font-weight: bold;
     animation: fadeIn 2s ease-in-out;
+}
+
+.hero2 .contacto a {
+    background-image: linear-gradient(to bottom, #f7f4f0, #9b9bf5);
+}
+
+
+.hero2 h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero2 p, li{
+    font-size: 1.5rem;
+}
+
+.hero2 li{
+    text-align: left;
 }
 
 .hero h1 {
@@ -92,6 +137,9 @@ header nav ul li a:hover {
     font-family: "Playwrite AU SA", serif;
     margin-bottom: 0rem;
 }
+
+
+
 
 /* Buttons */
 button {
@@ -146,7 +194,7 @@ button:hover {
 
 /* Hover Effects */
 section:hover {
-    transform: scale(1.02);
+    transform: scale(1.005);
     transition: transform 0.3s ease;
 }
 
@@ -181,6 +229,7 @@ section:hover {
 }
 
 .grid-item img {
+    max-width: 100%;
     width: 100px; /* Tamaño del logo */
     height: 100px;
     margin-bottom: 0rem; /* Espacio entre el logo y el título */
@@ -199,4 +248,73 @@ section:hover {
 
 .grid-item a:hover {
     color: #c8a165;
+}
+
+
+
+@media (max-width: 768px) {
+    body {
+        line-height: 1.6;
+        padding: auto;
+        margin: auto;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero {
+        background-size: cover; /* Que la imagen cubra toda la sección */
+        background-position: center; /* Centra la imagen */
+        background-repeat: no-repeat; /* Evita la repetición de la imagen */
+        color: white; /* Color del texto */
+        text-align: center; /* Centra el contenido */
+        width: 100%; /* Ocupa todo el ancho de la ventana */
+        height: 100vh; /* Ocupa toda la altura de la ventana */
+        display: flex; /* Permite centrar vertical y horizontalmente */
+        flex-direction: column; /* Mantiene los elementos en columna */
+        justify-content: center; /* Centra el contenido verticalmente */
+        align-items: center; /* Centra el contenido horizontalmente */
+        padding: 0;
+        margin: 0;
+    }
+    
+    .hero2{
+        padding: 4rem 1rem;
+    }
+        
+    
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .grid-links {
+        grid-template-columns: 1fr; /* Una columna en móviles */
+    }
+
+    .grid-item {
+        flex-direction: column; /* Cambia la disposición a columnas */
+        height: auto; /* Ajusta la altura */
+    }
+
+    .grid-item img {
+        margin-bottom: 1rem; /* Espacio entre imagen y texto */
+        margin-right: 0; /* Elimina el espacio lateral */
+        max-width: 100%;
+    }
+
+    header nav ul {
+        flex-direction: column; /* Navegación en columna */
+        gap: 1rem; /* Reduce el espacio */
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 0.6rem 1rem;
+    }
+
 }
