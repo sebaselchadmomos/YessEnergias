@@ -116,6 +116,12 @@ header nav ul li a:hover {
     animation: fadeIn 2s ease-in-out;
 }
 
+.hero2 h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    animation: fadeIn 2s ease-in-out;
+}
+
 .hero2 p, li{
     font-size: 1.5rem;
 }
