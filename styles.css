@@ -98,6 +98,17 @@ header nav ul li a:hover {
     align-items: center;
     
 }
+.herofoto {
+    text-align: center;
+    padding: 4rem 15rem;
+    
+    color: #4a4a8a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
 
 .hero2 h1 {
     font-size: 4rem;
@@ -256,6 +267,12 @@ section:hover {
     color: #c8a165;
 }
 
+#foto{
+    height: 1080px / 2;
+    width: 1920px / 2;
+    border-radius: 0%;
+    
+}
 
 
 @media (max-width: 768px) {
@@ -263,6 +280,7 @@ section:hover {
         line-height: 1.6;
         padding: auto;
         margin: auto;
+        overflow-x: hidden;
     }
 
     h1 {
@@ -291,6 +309,7 @@ section:hover {
     
     .hero2{
         padding: 4rem 1rem;
+        overflow-x: hidden;
     }
         
     
@@ -323,4 +342,14 @@ section:hover {
         padding: 0.6rem 1rem;
     }
 
+
+    #foto{
+        height: 250px;
+        width: 500px;
+        border-radius: 0%;
+        padding-right: 100px;
+        overflow-x: hidden;
+        
+    }
 }
+
